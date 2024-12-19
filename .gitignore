@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+ __pycache__/
+
+source/*
+!/source/.gitkeep
+
+output/*
+!/output/.gitkeep
+
