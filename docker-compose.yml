@@ -1,0 +1,10 @@
+services:
+  python:
+    image: python:3.14.0a3-slim  # 使用正确的 Python 3.14 镜像
+    container_name: ncm2mp3  # 容器名称
+    volumes:
+      - ./:/usr/src/app  # 将当前目录映射到容器内的 /usr/src/app
+    working_dir: /usr/src/app  # 设置容器的工作目录
+    command: ["bash", "-c", "pip install pycryptodome mutagen && python convert.py"]  # 启动 bash 终端
+    stdin_open: true  # 保持容器的 stdin 打开
+    tty: true  # 允许使用交互式终端
